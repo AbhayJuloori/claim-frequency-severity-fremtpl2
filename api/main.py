@@ -52,6 +52,11 @@ def metrics() -> dict:
     return {k: m[k] for k in ["audit", "n_train", "n_test", "frequency", "severity", "pure_premium", "deciles"]}
 
 
+@app.get("/segments-all")
+def segments_all() -> dict:
+    return artifact("segments.json")
+
+
 @app.get("/segments/{dimension}")
 def segments(dimension: str) -> list[dict]:
     segs = artifact("segments.json")

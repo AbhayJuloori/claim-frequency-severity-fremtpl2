@@ -23,6 +23,7 @@ def test_segments_and_unknown_dimension(client):
     rows = client.get("/segments/DrivAgeBand").json()
     assert rows and {"segment", "lgb_relativity"} <= set(rows[0])
     assert client.get("/segments/Nope").status_code == 404
+    assert "Area" in client.get("/segments-all").json()
 
 
 def test_notes_hide_unverified_prose(client):

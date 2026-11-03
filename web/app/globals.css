@@ -1,0 +1,26 @@
+:root { --bg:#f8f9fb; --fg:#18202a; --muted:#5d6874; --card:#fff; --line:#e1e5ea; --glm:#8a6d1f; --lgb:#2c6bb0; --obs:#2f2f2f; --ok:#1f7a4d; --bad:#a33b2b; }
+@media (prefers-color-scheme: dark) { :root { --bg:#12161b; --fg:#e6e9ed; --muted:#98a3ae; --card:#1a2027; --line:#2a323b; --glm:#d6b35a; --lgb:#78acea; --obs:#e6e9ed; --ok:#5cc28f; --bad:#e57b69; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:1040px; margin:0 auto; padding:28px 16px 64px; }
+h1 { font-size:1.7rem; margin:0 0 4px; } h2 { font-size:1.15rem; margin:32px 0 10px; }
+.sub { color:var(--muted); margin:0 0 20px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; }
+.card b { display:block; font-size:1.35rem; } .card span { color:var(--muted); font-size:.85rem; }
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+.tabs button { border:1px solid var(--line); background:var(--card); color:var(--fg); border-radius:999px; padding:5px 12px; cursor:pointer; }
+.tabs button[aria-pressed="true"] { background:var(--lgb); color:#fff; border-color:var(--lgb); }
+.scroll { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; background:var(--card); font-size:.88rem; }
+th, td { padding:6px 9px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; }
+.bar { height:8px; background:var(--lgb); border-radius:4px; display:inline-block; vertical-align:middle; }
+.note { border-left:3px solid var(--ok); padding:8px 12px; background:var(--card); margin-top:10px; }
+.note.rejected { border-color:var(--bad); color:var(--muted); }
+.legend { color:var(--muted); font-size:.85rem; }
+form.predict { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; }
+form.predict label { font-size:.82rem; color:var(--muted); display:flex; flex-direction:column; gap:2px; }
+form.predict input, form.predict select { padding:5px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); }
+button.go { background:var(--lgb); color:#fff; border:0; border-radius:6px; padding:8px 14px; cursor:pointer; }
+a { color:var(--lgb); }
