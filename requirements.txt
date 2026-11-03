@@ -1,0 +1,11 @@
+scikit-learn==1.8.0
+lightgbm==4.6.0
+pandas
+numpy
+pyarrow
+joblib
+fastapi
+uvicorn
+httpx
+pytest
+matplotlib
